@@ -7,6 +7,18 @@
 # BlueJ files
 *.ctxt
 
+# IntelliJ
+out/
+.idea/
+.idea_modules/
+*.iml
+*.ipr
+*.iws
+
+# VSCode
+.vscode/
+.code-workspace
+
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
@@ -19,5 +31,17 @@
 *.tar.gz
 *.rar
 
+# Gradle
+bin/
+build/
+.gradle
+.gradletasknamecache
+gradle-app.setting
+!gradle-wrapper.jar
+/build/
+!gradle/wrapper/gradle-wrapper.jar
+
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+.DS_Store

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Mancala</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="styles.css" />
+		<script src="./scripts/script.js" defer></script>
+		<script src="./scripts/kalah.js" defer></script>
+		<script src="./scripts/board.js" defer></script>
+		<script src="./scripts/turn.js" defer></script>
+		<script src="./scripts/modal.js" defer></script>
+	</head>
+	<body onload="Kalah.initialize()" data-player="one">
+		<h1>Kalah</h1>
+
+		<div class="board">
+			<div class="player-two store"><p id="PLAYER_B_STORE"></p></div>
+
+			<div class="rows">
+				<div id="player-context-two" class="row">
+					<div class="pit" onclick="getId(children[0].id)">
+						<p id="PLAYER_B_PIT_6"></p>
+					</div>
+
+					<div class="pit" onclick="getId(children[0].id)">
+						<p id="PLAYER_B_PIT_5"></p>
+					</div>
+
+					<div class="pit" onclick="getId(children[0].id)">
+						<p id="PLAYER_B_PIT_4"></p>
+					</div>
+
+					<div class="pit" onclick="getId(children[0].id)">
+						<p id="PLAYER_B_PIT_3"></p>
+					</div>
+
+					<div class="pit" onclick="getId(children[0].id)">
+						<p id="PLAYER_B_PIT_2"></p>
+					</div>
+
+					<div class="pit" onclick="getId(children[0].id)">
+						<p id="PLAYER_B_PIT_1"></p>
+					</div>
+				</div>
+
+				<div id="player-context-one" class="row">
+					<div class="pit" onclick="getId(children[0].id)">
+						<p id="PLAYER_A_PIT_1"></p>
+					</div>
+
+					<div class="pit" onclick="getId(children[0].id)">
+						<p id="PLAYER_A_PIT_2"></p>
+					</div>
+
+					<div class="pit" onclick="getId(children[0].id)">
+						<p id="PLAYER_A_PIT_3"></p>
+					</div>
+
+					<div class="pit" onclick="getId(children[0].id)">
+						<p id="PLAYER_A_PIT_4"></p>
+					</div>
+
+					<div class="pit" onclick="getId(children[0].id)">
+						<p id="PLAYER_A_PIT_5"></p>
+					</div>
+
+					<div class="pit" onclick="getId(children[0].id)">
+						<p id="PLAYER_A_PIT_6"></p>
+					</div>
+				</div>
+			</div>
+
+			<div class="player-one store"><p id="PLAYER_A_STORE"></p></div>
+		</div>
+
+		<p>It is player <span id="turn">one</span>'s turn</p>
+
+		<div class="modal-overlay">
+			<div class="modal">
+				<div>
+					<h2 id="winner"></h2>
+					<div>
+						<p>player one's store: <span id="store-one"></span> stones</p>
+						<p>player two's store: <span id="store-two"></span> stones</p>
+					</div>
+					<div>
+						<button onclick="Kalah.reset()">Play again</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
